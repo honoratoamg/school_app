@@ -32,7 +32,10 @@ class _CursoCardWidgetState
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: ListTile(
-            onTap: () => {},
+            onTap: () async => await Modular.to.pushNamed(
+                AppModule.addEditCursoRouteName,
+                arguments: AddEditCursoArguments(
+                    curso: widget.curso, callback: widget.callback)),
             leading: const Icon(Icons.book),
             title: ScrollableText(widget.curso.descricao),
             trailing: SingleChildScrollView(
@@ -40,15 +43,15 @@ class _CursoCardWidgetState
               child: Row(
                 children: [
                   IconButton(
+                    onPressed: () => controller.deleteCursoConfirmation(context, widget.curso, widget.callback),
+                    icon: const Icon(Icons.delete, color: Colors.red),
+                  ),
+                  IconButton(
                     onPressed: () async => await Modular.to.pushNamed(
                         AppModule.addEditCursoRouteName,
                         arguments: AddEditCursoArguments(
                             curso: widget.curso, callback: widget.callback)),
                     icon: const Icon(Icons.edit),
-                  ),
-                  IconButton(
-                    onPressed: () => controller.deleteCursoConfirmation(context, widget.curso, widget.callback),
-                    icon: const Icon(Icons.delete, color: Colors.red),
                   ),
                 ],
               ),

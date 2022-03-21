@@ -11,6 +11,19 @@ Tela inicial - Cursos      |  Tela inicial - Matrículas
 :-------------------------:|:-------------------------:
 <img src="images/Screenshot_3.png" width="300">|<img src="images/Screenshot_4.png" width="300">|
 
+## Features 
+1. Arquitetura Limpa (Clean Architecture)
+2. Clean Code e SOLID (Com práticas do TDD)
+3. Testes (Unit tests, Integration tests e Widget Tests)
+4. Injeção de dependência (com o Flutter Modular)
+5. Null Safety
+6. Consumo de API (Dio)
+7. Gerência de estado (Gerências nativas: Change Notifier e callbacks com SetState)
+8. Requisições assíncronas (Asynchronous Requests - Future)
+9. Programação Funcional (Dartz, Either)
+10. Animações 
+11. Tests (Unit, Widget e Integration)
+
 ## Versions
 1. Flutter: 2.10.3
 2. Android SDK: 32.0.0
